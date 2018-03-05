@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -41,5 +42,12 @@ public class MainActivity extends Activity {
         Intent i = new Intent("com.adevianin.watcherservice");
         i.setPackage("com.adevianin.watcher");
         startService(i);
+    }
+
+    public void disableLed(View view) {
+        int value = 0;
+        android.provider.Settings.System.putInt(getContentResolver(), "notification_light_pulse", value);
+
+        Toast.makeText(this, "led is disabled", Toast.LENGTH_LONG).show();
     }
 }

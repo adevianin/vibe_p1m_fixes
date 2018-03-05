@@ -7,9 +7,22 @@
 
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Watcher"
-        android:id="@+id/button"
-        android:onClick="startWathcer"/>
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="32dp"
+        android:layout_toStartOf="@+id/button2"
+        android:onClick="startWathcer"
+        android:text="Start Watcher" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="43dp"
+        android:onClick="disableLed"
+        android:text="disable LED" />
 </RelativeLayout>
